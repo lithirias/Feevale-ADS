@@ -1,0 +1,34 @@
+Algoritmo: Consumo Mínimo
+Variáveis:
+    mes_1: real
+    mes_2: real
+    mes_3: real
+    media: real
+Início
+    Escreva("Digite o consumo de GB no último mês: ")
+    Leia(mes_1)
+    Enquanto(mes_1 <= 0)
+        Escreva("Digite um consumo válido")
+        Leia(mes_1)
+    FmEnquanto
+    Escreva("Digite o consumo de GB no penúltimo mês: ")
+    Leia(mes_2)
+    Enquanto(mes_2 <= 0)
+        Escreva("Digite um consumo válido")
+        Leia(mes_2)
+    FmEnquanto
+    Escreva("Digite o consumo de GB no antepenúltimo mês: ")
+    Leia(mes_3)
+    Enquanto(mes_3 <= 0)
+        Escreva("Digite um consumo válido")
+        Leia(mes_3)
+    FmEnquanto
+    media: (mes_1+mes_2+mes_3)/3
+    Se(media <= 1)
+        Então Escreva("O plano mínimo recomendado é de 1GB por R$50,00 mensais")
+        Senão Se(media <= 3)
+            Então Escreva("O plano mínimo recomendado é de 3GBs por R$100,00 mensais")
+            Senão Escreva("O plano recomendado é ilimitado por R$180,00 mensais")
+        FimSe
+    FimSe
+Fim
