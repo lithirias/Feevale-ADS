@@ -14,8 +14,8 @@ Lembre-se de garantir que os dados lidos estejam adequados ao problema.
 #include <stdio.h>
 
 int main(){
-    int aulas, faltas;
-    float alunos, nmr1, nmr2, nmr3, media, reprova_faltas = 0, reprova_notas = 0, aprova = 0;
+    int aulas;
+    float alunos, faltas, nmr1, nmr2, nmr3, media, reprova_faltas = 0, reprova_notas = 0, aprova = 0;
 
     do{
         printf("\nDigite a quantidade de alunos e aulas ministradas: ");
@@ -39,7 +39,7 @@ int main(){
         if (media >= 7){
             do{
                 printf("\nDigite o numero de faltas do aluno %d: ", i+1);
-                scanf("%d", &faltas);
+                scanf("%f", &faltas);
             }while(faltas < 0 && faltas > aulas);
 
             if ((faltas / aulas) > 0.25){
@@ -54,5 +54,5 @@ int main(){
 
     printf("\nAlunos aprovados: %.2f%%", (aprova/alunos)*100);
     printf("\nAlunos reprovados por nota: %.2f%%", (reprova_notas/alunos)*100);
-    printf("\nAlunos reprovador por falta: %.2f%%", (reprova_faltas/alunos)*100);
+    printf("\nAlunos reprovados por falta: %.2f%%", (reprova_faltas/alunos)*100);
 }
